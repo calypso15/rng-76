@@ -3390,6 +3390,7 @@
                 + "<br>Improves the following mutations:"
                 + "<ul>"
                     + "<li>Adrenal Reaction</li>"
+                    + "<li>Twisted Muscles</li>"
                 + "</ul>"
             );
             infoMap.set("nighttime", 
@@ -4720,8 +4721,9 @@
 
                 var twistedMuscles = document.getElementById("twistedmuscles" + index + "_yes");
                 if (twistedMuscles != null && twistedMuscles.checked) {
-                    totalDamageMultiply.push(25);
-                    totalDamageEnergyMultiply.push(25);
+                	var superVersion = document.getElementById("strangeinnumbers" + index + "_yes").checked;
+                    totalDamageMultiply.push(25 * (superVersion ? 1.25 : 1));
+                    totalDamageEnergyMultiply.push(25 * (superVersion ? 1.25 : 1));
                 }
 
                 var otherboost = document.getElementById("otherboost" + index);
